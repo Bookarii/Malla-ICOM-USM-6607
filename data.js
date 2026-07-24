@@ -50,7 +50,7 @@ const ramos = [
   // 5to Semestre (7 ramos)
   // -------------------------------------
   { id: 28, sigla: "ICS244", nombre: "Dirección Tributaria", semestre: 5, area: "Legislación", creditos: 5, prerrequisitos: ["ICS140"] },
-  { id: 29, sigla: "HAH101", nombre: "Historia Económica", semestre: 5, area: "Humanista", creditos: 5, prerrequisitos: [] },
+  { id: 29, sigla: "HAH101", nombre: "Historia Económica", semestre: 5, area: "Humanistas", creditos: 5, prerrequisitos: [] },
   { id: 30, sigla: "HCW201", nombre: "Inglés V", semestre: 5, area: "Inglés", creditos: 3, prerrequisitos: ["HCW200"] },
   { id: 31, sigla: "ICS31025", nombre: "Macroeconomía I", semestre: 5, area: "Economía", creditos: 5, prerrequisitos: ["ICS162"] },
   { id: 32, sigla: "ICS70825", nombre: "Marketing I", semestre: 5, area: "Marketing", creditos: 5, prerrequisitos: ["ICS161", "ICS111"] },
