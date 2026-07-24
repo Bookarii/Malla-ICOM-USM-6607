@@ -6,7 +6,7 @@ const ramos = [
   // -------------------------------------
   // 1er Semestre (7 ramos)
   // -------------------------------------
-  { sigla: "ICS111", nombre: "Administración de Empresas", semestre: 1, area: "administracion", creditos: 5, prerrequisitos: [] },
+  { id:1, sigla: "ICS111", nombre: "Administración de Empresas", semestre: 1, area: "administracion", creditos: 5, prerrequisitos: [] },
   { sigla: "HAC100", nombre: "Comunicación Escrita", semestre: 1, area: "humanidades", creditos: 5, prerrequisitos: [] },
   { sigla: "EFI100", nombre: "Educación Física I", semestre: 1, area: "deportes", creditos: 2, prerrequisitos: [] },
   { sigla: "HCW100", nombre: "Inglés I", semestre: 1, area: "idiomas", creditos: 3, prerrequisitos: [] },
