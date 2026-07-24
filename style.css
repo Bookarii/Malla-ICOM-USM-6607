@@ -195,3 +195,90 @@ footer{
     margin-top:10px;
 
 }
+/* ========================================= */
+/* TARJETAS */
+/* ========================================= */
+
+.ramo{
+
+    width:100%;
+    height:95px;
+
+    display:flex;
+    flex-direction:column;
+
+    border-radius:6px;
+
+    overflow:hidden;
+
+    color:white;
+
+    font-size:12px;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
+
+}
+
+
+/* Barra superior */
+
+.superior{
+
+    background:#666;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:4px 6px;
+
+    font-size:11px;
+
+}
+
+
+/* Nombre */
+
+.nombre{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:5px;
+
+    font-weight:bold;
+
+}
+
+
+/* Barra inferior */
+
+.inferior{
+
+    background:#666;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:4px 6px;
+
+    font-size:11px;
+
+}
+
+
+/* Colores */
+
+.administracion{
+
+    background:#2e7d32;
+
+}
