@@ -1,0 +1,129 @@
+/* =================================================== */
+/* CONFIGURACIÓN GENERAL */
+/* =================================================== */
+
+:root{
+
+    --color-fondo: #f4f4f4;
+
+    --gris-superior: #707070;
+    --gris-inferior: #707070;
+
+    --color-texto: #222;
+
+    --ancho-ramo: 95px;
+    --alto-ramo: 90px;
+
+}
+
+
+/* =================================================== */
+/* PÁGINA */
+/* =================================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    background:var(--color-fondo);
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    color:var(--color-texto);
+
+}
+
+
+/* =================================================== */
+/* ENCABEZADO */
+/* =================================================== */
+
+header{
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+header h1{
+
+    font-size:32px;
+
+}
+
+header h2{
+
+    font-size:18px;
+
+    color:#666;
+
+}
+
+
+/* =================================================== */
+/* CONTENEDOR DE LA MALLA */
+/* =================================================== */
+
+#malla{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    padding:30px;
+
+}
+
+
+/* =================================================== */
+/* PIE */
+/* =================================================== */
+
+footer{
+
+    margin-top:40px;
+
+    text-align:center;
+
+}
+
+#barra-progreso{
+
+    width:80%;
+
+    height:18px;
+
+    margin:auto;
+
+    border-radius:10px;
+
+    background:#d9d9d9;
+
+    overflow:hidden;
+
+}
+
+#progreso{
+
+    width:0%;
+
+    height:100%;
+
+    background:#009879;
+
+}
+
+#texto-progreso{
+
+    margin-top:10px;
+
+}
