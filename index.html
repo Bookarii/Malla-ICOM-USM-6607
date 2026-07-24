@@ -143,11 +143,19 @@
 
             0 / 58 ramos aprobados
 
-        </div>
-
         <div id="creditos">
 
-            Créditos aprobados: <strong>0</strong>
+            Créditos aprobados:
+            <strong>0</strong>
+
+        </div>
+
+        <div id="estadistica-extra">
+
+            Porcentaje completado:
+            <span id="porcentaje">
+                0%
+            </span>
 
         </div>
 
@@ -227,7 +235,7 @@
 
         <button id="reiniciar">
 
-            Reiniciar progreso
+            Borrar progreso
 
         </button>
 
@@ -237,7 +245,10 @@
     <!-- TOOLTIP -->
     <!-- ========================= -->
 
-    <div id="tooltip"></div>
+    <div
+        id="tooltip"
+        aria-hidden="true">
+    </div>
 
     <!-- ========================= -->
     <!-- SCRIPTS -->
