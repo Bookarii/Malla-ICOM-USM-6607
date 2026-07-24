@@ -121,7 +121,75 @@ footer{
     background:#009879;
 
 }
+/* ========================================= */
+/* CONTENEDOR DE LA MALLA */
+/* ========================================= */
 
+#contenedor-malla{
+
+    width:100%;
+
+    overflow-x:auto;
+
+    padding:25px;
+
+}
+
+/* ========================================= */
+/* COLUMNAS */
+/* ========================================= */
+
+#malla{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:flex-start;
+
+    width:max-content;
+
+}
+
+.semestre{
+
+    width:120px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.titulo-semestre{
+
+    background:#555;
+
+    color:white;
+
+    text-align:center;
+
+    font-weight:bold;
+
+    border-radius:8px;
+
+    padding:8px;
+
+    margin-bottom:15px;
+
+}
+
+.contenedor-ramos{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    min-height:750px;
+
+}
 #texto-progreso{
 
     margin-top:10px;
