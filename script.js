@@ -340,7 +340,7 @@ function mostrarPanel(ramo){
         ramo.area;
 
     document.getElementById("info-creditos").textContent =
-        ramo.creditos + " SCT";
+        ramo.creditos;
 
     document.getElementById("info-prerrequisitos").textContent =
 
