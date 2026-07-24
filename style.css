@@ -1,177 +1,1081 @@
-/* =================================================== */
-/* CONFIGURACIÓN GENERAL */
-/* =================================================== */
+/* ==========================
+   VARIABLES
+========================== */
 
-:root {
-  --color-fondo: #f4f4f4;
-  --gris-superior: #555555;
-  --gris-inferior: #555555;
-  --color-texto: #222;
-  --ancho-ramo: 120px;
-  --alto-ramo: 95px;
+:root{
+
+    --fondo:#f5f5f5;
+
+    --grisOscuro:#6c6c6c;
+    --grisClaro:#e6e6e6;
+
+    --texto:#222;
+
+    --anchoRamo:130px;
+    --altoRamo:95px;
+
+    --radio:7px;
+
+    --sombra:0px 3px 8px rgba(0,0,0,.18);
+
+    --transicion:.20s;
+
 }
 
-/* =================================================== */
-/* PÁGINA */
-/* =================================================== */
+/* ==========================
+   RESET
+========================== */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
 }
 
-body {
-  background: var(--color-fondo);
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--color-texto);
+body{
+
+    background:var(--fondo);
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    color:var(--texto);
+
 }
 
-/* =================================================== */
-/* ENCABEZADO */
-/* =================================================== */
+/* ==========================
+   HEADER
+========================== */
 
-header {
-  text-align: center;
-  padding: 25px;
+header{
+
+    text-align:center;
+
+    padding:28px 20px 18px;
+
 }
 
-header h1 {
-  font-size: 32px;
+header h1{
+
+    font-size:34px;
+
+    font-weight:bold;
+
 }
 
-header h2 {
-  font-size: 18px;
-  color: #666;
+header h2{
+
+    margin-top:6px;
+
+    color:#666;
+
+    font-size:18px;
+
+    font-weight:normal;
+
 }
 
-/* =================================================== */
-/* CONTENEDOR DE LA MALLA */
-/* =================================================== */
+/* ==========================
+   CONTENEDOR
+========================== */
 
-#contenedor-malla {
-  width: 100%;
-  overflow-x: auto;
-  padding: 25px;
+#contenedor-malla{
+
+    width:100%;
+
+    overflow-x:auto;
+
+    padding:20px;
+
 }
 
-#malla {
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;
-  width: max-content;
-  margin: 0 auto; /* Centra la malla si entra en pantalla */
+/* scrollbar */
+
+#contenedor-malla::-webkit-scrollbar{
+
+    height:10px;
+
 }
 
-.semestre {
-  width: var(--ancho-ramo);
-  display: flex;
-  flex-direction: column;
+#contenedor-malla::-webkit-scrollbar-thumb{
+
+    background:#bbbbbb;
+
+    border-radius:10px;
+
 }
 
-.titulo-semestre {
-  background: #333;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 8px;
-  padding: 8px;
-  margin-bottom: 15px;
+/* ==========================
+   MALLA
+========================== */
+
+#malla{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    width:max-content;
+
+    margin:auto;
+
 }
 
-.contenedor-ramos {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  min-height: 600px;
+/* ==========================
+   SEMESTRES
+========================== */
+
+.semestre{
+
+    display:flex;
+
+    flex-direction:column;
+
+    width:var(--anchoRamo);
+
 }
 
-/* =================================================== */
-/* TARJETAS (RAMOS) */
-/* =================================================== */
+.titulo-semestre{
 
-.ramo {
-  width: 100%;
-  height: var(--alto-ramo);
-  display: flex;
-  flex-direction: column;
-  border-radius: 6px;
-  overflow: hidden;
-  color: white;
-  font-size: 11px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+    background:#6d6d6d;
+
+    color:white;
+
+    text-align:center;
+
+    font-weight:bold;
+
+    padding:8px;
+
+    border-radius:5px;
+
+    margin-bottom:12px;
+
+    letter-spacing:1px;
+
 }
 
-.ramo:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+.contenedor-ramos{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    min-height:700px;
+
 }
 
-/* Barra superior */
-.superior {
-  background: var(--gris-superior);
-  display: flex;
-  justify-content: space-between;
-  padding: 3px 6px;
-  font-weight: bold;
+/* ==========================
+   LEYENDA
+========================== */
+
+#leyenda{
+
+    width:95%;
+
+    margin:30px auto 10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
 }
 
-/* Nombre */
-.nombre {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 4px;
-  font-weight: bold;
-  line-height: 1.2;
+.item-leyenda{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    font-size:13px;
+
 }
 
-/* Barra inferior */
-.inferior {
-  background: var(--gris-inferior);
-  display: flex;
-  justify-content: space-between;
-  padding: 3px 6px;
+.color{
+
+    width:15px;
+
+    height:15px;
+
+    border-radius:50%;
+
 }
 
-/* Colores por Área */
-.administracion { background: #2e7d32; }
-.matematica { background: #1565c0; }
-.programacion { background: #e65100; }
+/* ==========================
+   ESTADÍSTICAS
+========================== */
 
-/* =================================================== */
-/* PIE DE PÁGINA */
-/* =================================================== */
+#estadisticas{
 
-footer {
-  margin-top: 20px;
-  text-align: center;
-  padding-bottom: 30px;
+    width:95%;
+
+    margin:30px auto;
+
+    text-align:center;
+
 }
 
-#barra-progreso {
-  width: 80%;
-  max-width: 600px;
-  height: 18px;
-  margin: auto;
-  border-radius: 10px;
-  background: #d9d9d9;
-  overflow: hidden;
+#barra-progreso{
+
+    width:75%;
+
+    max-width:700px;
+
+    margin:auto;
+
+    height:18px;
+
+    border-radius:15px;
+
+    background:#d8d8d8;
+
+    overflow:hidden;
+
 }
 
-#progreso {
-  width: 0%;
-  height: 100%;
-  background: #009879;
-  transition: width 0.3s ease;
+#progreso{
+
+    width:0%;
+
+    height:100%;
+
+    background:#1ca55c;
+
+    transition:.35s;
+
 }
 
-#texto-progreso {
-  margin-top: 10px;
-  font-size: 14px;
-  font-weight: bold;
+#texto-progreso{
+
+    margin-top:12px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
 }
+
+#creditos{
+
+    margin-top:6px;
+
+    color:#555;
+
+    font-size:15px;
+
+}
+
+/* ==========================
+   PANEL
+========================== */
+
+#panel-info{
+
+    width:900px;
+
+    max-width:95%;
+
+    margin:25px auto;
+
+    background:white;
+
+    border-radius:8px;
+
+    box-shadow:var(--sombra);
+
+    padding:20px;
+
+}
+
+#titulo-panel{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    margin-bottom:15px;
+
+    color:#444;
+
+}
+
+.dato{
+
+    display:grid;
+
+    grid-template-columns:170px 1fr;
+
+    margin:10px 0;
+
+    gap:15px;
+
+}
+
+.dato strong{
+
+    color:#555;
+
+}
+
+/* ==========================
+   BOTÓN
+========================== */
+
+#acciones{
+
+    text-align:center;
+
+    margin:25px 0;
+
+}
+
+#reiniciar{
+
+    border:none;
+
+    padding:12px 24px;
+
+    border-radius:8px;
+
+    background:#d94b4b;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.2s;
+
+}
+
+#reiniciar:hover{
+
+    transform:scale(1.04);
+
+}
+
+/* ==========================
+   TOOLTIP
+========================== */
+
+#tooltip{
+
+    position:fixed;
+
+    pointer-events:none;
+
+    background:white;
+
+    border-radius:6px;
+
+    padding:12px;
+
+    box-shadow:0 3px 15px rgba(0,0,0,.25);
+
+    display:none;
+
+    width:240px;
+
+    font-size:13px;
+
+    z-index:999;
+
+}
+
+/* =======================================================
+   TARJETAS DE LOS RAMOS
+======================================================= */
+
+.ramo{
+
+    position:relative;
+
+    width:100%;
+
+    height:var(--altoRamo);
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+    border-radius:var(--radio);
+
+    color:white;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    box-shadow:var(--sombra);
+
+    transition:all .20s ease;
+
+}
+
+.ramo:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 6px 15px rgba(0,0,0,.25);
+
+}
+
+/* ==========================
+   BARRA SUPERIOR
+========================== */
+
+.superior{
+
+    height:20px;
+
+    background:#5b5b5b;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 7px;
+
+    font-size:10px;
+
+    font-weight:bold;
+
+    letter-spacing:.3px;
+
+}
+
+/* ==========================
+   NOMBRE
+========================== */
+
+.nombre{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:6px;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    line-height:1.18;
+
+}
+
+/* ==========================
+   BARRA INFERIOR
+========================== */
+
+.inferior{
+
+    height:20px;
+
+    background:#5b5b5b;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 6px;
+
+    font-size:9px;
+
+}
+
+/* =======================================================
+   COLORES POR ÁREA
+======================================================= */
+
+.matematica{
+
+    background:#0094d9;
+
+}
+
+.administracion{
+
+    background:#00a651;
+
+}
+
+.economia{
+
+    background:#9c27b0;
+
+}
+
+.finanzas{
+
+    background:#1b5eb8;
+
+}
+
+.marketing{
+
+    background:#f57c00;
+
+}
+
+.tecnologia{
+
+    background:#795548;
+
+}
+
+.humanidades{
+
+    background:#5f6368;
+
+}
+
+.idiomas{
+
+    background:#ff4081;
+
+}
+
+.deportes{
+
+    background:#43a047;
+
+}
+
+.legal{
+
+    background:#ef5350;
+
+}
+
+.sustentabilidad{
+
+    background:#26a69a;
+
+}
+
+.talleres{
+
+    background:#ec407a;
+
+}
+
+.electivo{
+
+    background:#607d8b;
+
+}
+
+.optativo{
+
+    background:#8d6e63;
+
+}
+
+.titulacion{
+
+    background:#424242;
+
+}
+
+/* =======================================================
+   EFECTO APROBADO
+======================================================= */
+
+.aprobado{
+
+    filter:saturate(110%);
+
+}
+
+/* línea diagonal */
+
+.aprobado::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:185px;
+
+    height:5px;
+
+    background:#5a1a1a;
+
+    top:44px;
+
+    left:-28px;
+
+    transform:rotate(38deg);
+
+    z-index:5;
+
+    pointer-events:none;
+
+}
+
+/* brillo */
+
+.aprobado::after{
+
+    content:"✓";
+
+    position:absolute;
+
+    top:5px;
+
+    right:7px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    color:white;
+
+    z-index:6;
+
+}
+
+/* =======================================================
+   BLOQUEADO
+======================================================= */
+
+.bloqueado{
+
+    background:#bdbdbd !important;
+
+    color:#f8f8f8;
+
+    cursor:not-allowed;
+
+    filter:grayscale(.9);
+
+}
+
+.bloqueado .superior{
+
+    background:#9d9d9d;
+
+}
+
+.bloqueado .inferior{
+
+    background:#9d9d9d;
+
+}
+
+.bloqueado:hover{
+
+    transform:none;
+
+    box-shadow:var(--sombra);
+
+}
+
+/* =======================================================
+   ANIMACIÓN
+======================================================= */
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+.ramo{
+
+    animation:aparecer .25s;
+
+}
+
+/* =======================================================
+   TOOLTIP
+======================================================= */
+
+#tooltip{
+
+    position:fixed;
+
+    display:none;
+
+    width:260px;
+
+    background:white;
+
+    color:#222;
+
+    border-radius:8px;
+
+    padding:12px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.22);
+
+    z-index:9999;
+
+    pointer-events:none;
+
+    font-size:13px;
+
+    line-height:1.45;
+
+    border-left:5px solid #2196f3;
+
+    animation:tooltip .12s;
+
+}
+
+@keyframes tooltip{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(8px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =======================================================
+   PANEL INFORMACIÓN
+======================================================= */
+
+#panel-info{
+
+    transition:.25s;
+
+}
+
+#panel-info:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 22px rgba(0,0,0,.18);
+
+}
+
+#panel-info span{
+
+    color:#444;
+
+}
+
+#titulo-panel{
+
+    border-bottom:2px solid #ececec;
+
+    padding-bottom:10px;
+
+}
+
+/* =======================================================
+   LEYENDA
+======================================================= */
+
+.item-leyenda{
+
+    transition:.2s;
+
+}
+
+.item-leyenda:hover{
+
+    transform:scale(1.08);
+
+}
+
+.color{
+
+    box-shadow:0 0 4px rgba(0,0,0,.25);
+
+}
+
+/* =======================================================
+   BARRA DE PROGRESO
+======================================================= */
+
+#progreso{
+
+    background:linear-gradient(
+        90deg,
+        #00c853,
+        #00e676
+    );
+
+}
+
+/* =======================================================
+   BOTÓN
+======================================================= */
+
+#reiniciar{
+
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+
+}
+
+#reiniciar:hover{
+
+    background:#c62828;
+
+}
+
+#reiniciar:active{
+
+    transform:scale(.96);
+
+}
+
+/* =======================================================
+   SCROLL
+======================================================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+    height:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ececec;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#9b9b9b;
+
+    border-radius:8px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#7c7c7c;
+
+}
+
+/* =======================================================
+   TRANSICIONES
+======================================================= */
+
+*{
+
+    transition:
+        background .2s,
+        color .2s,
+        border .2s,
+        box-shadow .2s;
+
+}
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+@media(max-width:1200px){
+
+    #panel-info{
+
+        width:95%;
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    header h1{
+
+        font-size:28px;
+
+    }
+
+    header h2{
+
+        font-size:16px;
+
+    }
+
+    :root{
+
+        --anchoRamo:120px;
+
+        --altoRamo:92px;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .dato{
+
+        grid-template-columns:1fr;
+
+        gap:3px;
+
+    }
+
+    #leyenda{
+
+        justify-content:flex-start;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    :root{
+
+        --anchoRamo:110px;
+
+        --altoRamo:88px;
+
+    }
+
+    .nombre{
+
+        font-size:11px;
+
+    }
+
+    .superior{
+
+        font-size:9px;
+
+    }
+
+    .inferior{
+
+        font-size:8px;
+
+    }
+
+}
+
+@media(max-width:450px){
+
+    header{
+
+        padding:18px;
+
+    }
+
+    header h1{
+
+        font-size:23px;
+
+    }
+
+    #barra-progreso{
+
+        width:95%;
+
+    }
+
+}
+
+/* =======================================================
+   EFECTOS OPCIONALES
+======================================================= */
+
+.ramo:active{
+
+    transform:scale(.97);
+
+}
+
+.ramo.aprobado{
+
+    animation:aprobado .25s;
+
+}
+
+@keyframes aprobado{
+
+    0%{
+
+        transform:scale(.90);
+
+    }
+
+    70%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+.bloqueado{
+
+    opacity:.72;
+
+}
+
+.aprobado{
+
+    opacity:1;
+
+}
+
+/* =======================================================
+   FIN DEL CSS
+======================================================= */
