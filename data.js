@@ -18,7 +18,7 @@ const ramos = [
   // 2do Semestre (7 ramos)
   // -------------------------------------
   { id: 8, sigla: "INF303", nombre: "Bases de Datos para la Gestión", semestre: 2, area: "Informática", creditos: 5, prerrequisitos: ["INF130"] },
-  { id: 9, sigla: "HAA102", nombre: "Comunicación Oral", semestre: 2, area: "Humanista", creditos: 5, prerrequisitos: ["HAC100"] },
+  { id: 9, sigla: "HAA102", nombre: "Comunicación Oral", semestre: 2, area: "Humanistas", creditos: 5, prerrequisitos: ["HAC100"] },
   { id: 10, sigla: "ICS140", nombre: "Contabilidad I", semestre: 2, area: "Finanzas", creditos: 5, prerrequisitos: [] },
   { id: 11, sigla: "EFI101", nombre: "Educación Física II", semestre: 2, area: "Defider", creditos: 2, prerrequisitos: ["EFI100"] },
   { id: 12, sigla: "HCW101", nombre: "Inglés II", semestre: 2, area: "Inglés", creditos: 3, prerrequisitos: ["HCW100"] },
