@@ -282,7 +282,7 @@ header h2{
 
 #panel-info{
 
-    width:900px;
+    width:850px;
 
     max-width:95%;
 
@@ -366,34 +366,6 @@ header h2{
 
 }
 
-/* ==========================
-   TOOLTIP
-========================== */
-
-#tooltip{
-
-    position:fixed;
-
-    pointer-events:none;
-
-    background:white;
-
-    border-radius:6px;
-
-    padding:12px;
-
-    box-shadow:0 3px 15px rgba(0,0,0,.25);
-
-    display:none;
-
-    width:240px;
-
-    font-size:13px;
-
-    z-index:999;
-
-}
-
 /* =======================================================
    TARJETAS DE LOS RAMOS
 ======================================================= */
@@ -424,6 +396,10 @@ header h2{
 
     transition:all .20s ease;
 
+    animation: aparecer .25s;
+
+   border:2px solid white;
+
 }
 
 .ramo:hover{
@@ -431,6 +407,8 @@ header h2{
     transform:translateY(-3px);
 
     box-shadow:0 6px 15px rgba(0,0,0,.25);
+
+    z-index:10;
 
 }
 
@@ -609,6 +587,7 @@ header h2{
 .aprobado{
 
     filter:saturate(110%);
+    opacity:1;
 
 }
 
@@ -624,7 +603,7 @@ header h2{
 
     height:5px;
 
-    background:#5a1a1a;
+    background:white;
 
     top:44px;
 
@@ -635,6 +614,8 @@ header h2{
     z-index:5;
 
     pointer-events:none;
+
+    opacity:.75;
 
 }
 
@@ -673,6 +654,8 @@ header h2{
     cursor:not-allowed;
 
     filter:grayscale(.9);
+
+    opacity:.72;
 
 }
 
@@ -717,12 +700,6 @@ header h2{
         transform:scale(1);
 
     }
-
-}
-
-.ramo{
-
-    animation:aparecer .25s;
 
 }
 
@@ -1061,20 +1038,6 @@ header h2{
         transform:scale(1);
 
     }
-
-}
-
-.bloqueado{
-
-    opacity:.72;
-
-}
-
-.aprobado{
-
-    opacity:1;
-
-}
 
 /* =======================================================
    FIN DEL CSS
