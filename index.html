@@ -14,12 +14,21 @@
 
 <body>
 
+    <!-- ========================= -->
+    <!-- ENCABEZADO -->
+    <!-- ========================= -->
+
     <header>
 
-        <h1>Malla Interactiva ICOM USM</h1>
+        <h1>Malla Interactiva Ingeniería Comercial</h1>
+
         <h2>Malla 6607</h2>
 
     </header>
+
+    <!-- ========================= -->
+    <!-- CONTENEDOR PRINCIPAL -->
+    <!-- ========================= -->
 
     <main>
 
@@ -27,13 +36,102 @@
 
             <section id="malla">
 
+                <!-- Se genera automáticamente desde script.js -->
+
             </section>
 
         </div>
 
     </main>
 
-    <footer>
+    <!-- ========================= -->
+    <!-- LEYENDA -->
+    <!-- ========================= -->
+
+    <section id="leyenda">
+
+        <div class="item-leyenda">
+            <span class="color matematica"></span>
+            Matemática
+        </div>
+
+        <div class="item-leyenda">
+            <span class="color administracion"></span>
+            Administración
+        </div>
+
+        <div class="item-leyenda">
+            <span class="color economia"></span>
+            Economía
+        </div>
+
+        <div class="item-leyenda">
+            <span class="color finanzas"></span>
+            Finanzas
+        </div>
+
+        <div class="item-leyenda">
+            <span class="color marketing"></span>
+            Marketing
+        </div>
+
+        <div class="item-leyenda">
+            <span class="color tecnologia"></span>
+            Tecnología
+        </div>
+
+        <div class="item-leyenda">
+            <span class="color legal"></span>
+            Legislación
+        </div>
+
+        <div class="item-leyenda">
+            <span class="color humanidades"></span>
+            Humanidades
+        </div>
+
+        <div class="item-leyenda">
+            <span class="color sustentabilidad"></span>
+            Sustentabilidad
+        </div>
+
+        <div class="item-leyenda">
+            <span class="color idiomas"></span>
+            Inglés
+        </div>
+
+        <div class="item-leyenda">
+            <span class="color deportes"></span>
+            Deportes
+        </div>
+
+        <div class="item-leyenda">
+            <span class="color talleres"></span>
+            Talleres
+        </div>
+
+        <div class="item-leyenda">
+            <span class="color electivo"></span>
+            Electivos
+        </div>
+
+        <div class="item-leyenda">
+            <span class="color optativo"></span>
+            Optativos
+        </div>
+
+        <div class="item-leyenda">
+            <span class="color titulacion"></span>
+            Titulación
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- PROGRESO -->
+    <!-- ========================= -->
+
+    <section id="estadisticas">
 
         <div id="barra-progreso">
 
@@ -41,13 +139,112 @@
 
         </div>
 
-        <p id="texto-progreso">
-            0 / 56 ramos aprobados
-        </p>
+        <div id="texto-progreso">
 
-    </footer>
+            0 / 58 ramos aprobados
+
+        </div>
+
+        <div id="creditos">
+
+            Créditos aprobados: <strong>0</strong>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- PANEL DE INFORMACIÓN -->
+    <!-- ========================= -->
+
+    <aside id="panel-info">
+
+        <div id="titulo-panel">
+
+            Selecciona un ramo
+
+        </div>
+
+        <div class="dato">
+
+            <strong>Sigla</strong>
+
+            <span id="info-sigla">-</span>
+
+        </div>
+
+        <div class="dato">
+
+            <strong>Nombre</strong>
+
+            <span id="info-nombre">-</span>
+
+        </div>
+
+        <div class="dato">
+
+            <strong>Semestre</strong>
+
+            <span id="info-semestre">-</span>
+
+        </div>
+
+        <div class="dato">
+
+            <strong>Área</strong>
+
+            <span id="info-area">-</span>
+
+        </div>
+
+        <div class="dato">
+
+            <strong>Créditos SCT</strong>
+
+            <span id="info-creditos">-</span>
+
+        </div>
+
+        <div class="dato">
+
+            <strong>Prerrequisitos</strong>
+
+            <span id="info-prerrequisitos">
+
+                Ninguno
+
+            </span>
+
+        </div>
+
+    </aside>
+
+    <!-- ========================= -->
+    <!-- BOTÓN -->
+    <!-- ========================= -->
+
+    <div id="acciones">
+
+        <button id="reiniciar">
+
+            Reiniciar progreso
+
+        </button>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- TOOLTIP -->
+    <!-- ========================= -->
+
+    <div id="tooltip"></div>
+
+    <!-- ========================= -->
+    <!-- SCRIPTS -->
+    <!-- ========================= -->
 
     <script src="data.js"></script>
+
     <script src="script.js"></script>
 
 </body>
